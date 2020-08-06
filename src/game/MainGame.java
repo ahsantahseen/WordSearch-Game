@@ -148,48 +148,49 @@ public class MainGame extends JFrame {
 		Level2.setLayout(null);
 		
 		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon(MainGame.class.getResource("/puzzles/Puzzle2.JPG")));
 		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setBounds(0, 0, 395, 308);
+		label.setBounds(-35, 11, 395, 308);
 		Level2.add(label);
 		
-		JRadioButton rdbtnA_7 = new JRadioButton("");
-		rdbtnA_7.setBounds(421, 228, 109, 23);
-		Level2.add(rdbtnA_7);
+		JRadioButton opt8 = new JRadioButton("SALSA");
+		opt8.setBounds(387, 239, 109, 23);
+		Level2.add(opt8);
 		
-		JRadioButton rdbtnA_4 = new JRadioButton("");
-		rdbtnA_4.setBounds(421, 151, 109, 23);
-		Level2.add(rdbtnA_4);
+		JRadioButton opt5 = new JRadioButton("JUICE");
+		opt5.setBounds(387, 162, 109, 23);
+		Level2.add(opt5);
 		
-		JRadioButton rdbtnA_2 = new JRadioButton("");
-		rdbtnA_2.setBounds(421, 100, 109, 23);
-		Level2.add(rdbtnA_2);
+		JRadioButton opt3 = new JRadioButton("CREAM");
+		opt3.setBounds(387, 111, 109, 23);
+		Level2.add(opt3);
 		
-		JRadioButton rdbtnA_1 = new JRadioButton("");
-		rdbtnA_1.setBounds(421, 74, 109, 23);
-		Level2.add(rdbtnA_1);
+		JRadioButton opt2 = new JRadioButton("COCKTAIL");
+		opt2.setBounds(387, 85, 109, 23);
+		Level2.add(opt2);
 		
-		JRadioButton rdbtnA = new JRadioButton("");
-		rdbtnA.setBounds(421, 48, 109, 23);
-		Level2.add(rdbtnA);
+		JRadioButton opt1 = new JRadioButton("BURGER");
+		opt1.setBounds(387, 59, 109, 23);
+		Level2.add(opt1);
 		
-		JRadioButton rdbtnA_3 = new JRadioButton("");
-		rdbtnA_3.setBounds(421, 126, 109, 23);
-		Level2.add(rdbtnA_3);
+		JRadioButton opt4 = new JRadioButton("CRISPS");
+		opt4.setBounds(387, 137, 109, 23);
+		Level2.add(opt4);
 		
-		JRadioButton rdbtnA_5 = new JRadioButton("");
-		rdbtnA_5.setBounds(421, 176, 109, 23);
-		Level2.add(rdbtnA_5);
+		JRadioButton opt6 = new JRadioButton("NACHOS");
+		opt6.setBounds(387, 187, 109, 23);
+		Level2.add(opt6);
 		
-		JRadioButton rdbtnA_6 = new JRadioButton("");
-		rdbtnA_6.setBounds(421, 202, 109, 23);
-		Level2.add(rdbtnA_6);
+		JRadioButton opt7 = new JRadioButton("PIZZA");
+		opt7.setBounds(387, 213, 109, 23);
+		Level2.add(opt7);
 		
 		JLabel label_1 = new JLabel("Find the following words and tick them");
-		label_1.setBounds(367, 0, 222, 41);
+		label_1.setBounds(333, 11, 222, 41);
 		Level2.add(label_1);
 		
 		JButton button = new JButton("Completed");
-		button.setBounds(421, 274, 109, 23);
+		button.setBounds(387, 285, 109, 23);
 		Level2.add(button);
 		
 		JPanel Level3 = new JPanel();

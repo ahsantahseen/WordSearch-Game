@@ -30,7 +30,7 @@ public class MainGame extends JFrame {
 	private JPanel contentPane;
 	private JTextField txtEnterName;
     String player_name;
-    String player_score;
+    float player_score;
 	/**
 	 * Launch the application.
 	 */
@@ -72,10 +72,10 @@ public class MainGame extends JFrame {
 		lblNewLabel_3.setBounds(22, 32, 89, 14);
 		contentPane.add(lblNewLabel_3);
 		
-		JLabel lblname = new JLabel();
-		lblname.setForeground(Color.WHITE);
-		lblname.setBounds(112, 32, 129, 14);
-		contentPane.add(lblname);
+		JLabel lblplayerscore = new JLabel();
+		lblplayerscore.setForeground(Color.WHITE);
+		lblplayerscore.setBounds(112, 32, 129, 14);
+		contentPane.add(lblplayerscore);
 		
 		JLabel label_4 = new JLabel("Player Name:");
 		label_4.setForeground(Color.WHITE);
@@ -268,6 +268,10 @@ public class MainGame extends JFrame {
 		
 		
 		JButton btnNewButton = new JButton("Completed");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -278,6 +282,10 @@ public class MainGame extends JFrame {
 			Level2.setVisible(true);
 			Level3.setVisible(false);
 			
+			player_score=player_score+20.0f;
+			lblplayerscore.setText(Float.toString(player_score)+"pts");
+				
+	        
 			
 			}
 			else {
@@ -289,6 +297,10 @@ public class MainGame extends JFrame {
 		Level1.add(btnNewButton);
 		
 		JButton button = new JButton("Completed");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		button.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -298,6 +310,9 @@ public class MainGame extends JFrame {
 					Level1.setVisible(false);
 					Level2.setVisible(false);
 					Level3.setVisible(true);
+					player_score=player_score+20.0f;
+					lblplayerscore.setText(Float.toString(player_score)+"pts");
+					
 					}
 					else {
 						JOptionPane.showMessageDialog(contentPane, "Please Find all the words in order to proceed");
@@ -323,6 +338,10 @@ public class MainGame extends JFrame {
 					player_name=txtEnterName.getText().toString();
 					lblplayername.setText(player_name);
 					
+					player_score=0.0f;
+					
+					lblplayerscore.setText(Float.toString(player_score)+"pts");
+					
 					
 				StartMenu.setVisible(false);
 				credits.setVisible(false);
@@ -342,6 +361,10 @@ public class MainGame extends JFrame {
 		StartMenu.add(lblWelcomeGamer);
 		
 		JButton button_1 = new JButton("Completed");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		button_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -350,6 +373,9 @@ public class MainGame extends JFrame {
 				Level1.setVisible(false);
 				Level2.setVisible(false);
 				Level3.setVisible(false);
+				player_score=player_score+20.0f;
+				lblplayerscore.setText(Float.toString(player_score)+"pts");
+				
 			
 			}
 		});

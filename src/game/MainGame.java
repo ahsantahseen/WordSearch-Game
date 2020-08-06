@@ -69,6 +69,7 @@ public class MainGame extends JFrame {
 		contentPane.add(layeredPane);
 		layeredPane.setLayout(new CardLayout(0, 0));
 		
+		
 		JPanel StartMenu = new JPanel();
 		StartMenu.setLayout(null);
 		layeredPane.add(StartMenu, "name_44347427825541");
@@ -316,5 +317,16 @@ public class MainGame extends JFrame {
 		label_5.setForeground(Color.WHITE);
 		label_5.setBounds(112, 11, 129, 14);
 		contentPane.add(label_5);
+		
+		JPanel credits = new JPanel();
+		credits.setLayout(null);
+		layeredPane.add(credits, "name_11963072974199");
+		
+		JLabel lblNewLabel_6 = new JLabel("THANK YOU FOR PLAYING");
+		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_6.setBounds(137, 103, 292, 93);
+		credits.add(lblNewLabel_6);
+		
 	}
 }

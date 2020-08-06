@@ -51,6 +51,7 @@ public class MainGame extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 742, 451);
 		contentPane = new JPanel();
+		contentPane.setLocation(-81, -49);
 		contentPane.setBackground(Color.BLACK);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -144,6 +145,7 @@ public class MainGame extends JFrame {
 		
 		
 		JPanel Level2 = new JPanel();
+		Level2.setBackground(Color.WHITE);
 		layeredPane.add(Level2, "name_41133699826709");
 		Level2.setLayout(null);
 		
@@ -194,52 +196,54 @@ public class MainGame extends JFrame {
 		Level2.add(button);
 		
 		JPanel Level3 = new JPanel();
+		Level3.setBackground(Color.WHITE);
 		layeredPane.add(Level3, "name_41138361164400");
 		Level3.setLayout(null);
 		
 		JLabel label_2 = new JLabel("");
+		label_2.setIcon(new ImageIcon(MainGame.class.getResource("/puzzles/Puzzle3.JPG")));
 		label_2.setHorizontalAlignment(SwingConstants.CENTER);
-		label_2.setBounds(0, 0, 395, 308);
+		label_2.setBounds(-38, 11, 395, 308);
 		Level3.add(label_2);
 		
-		JRadioButton rdbtnA_15 = new JRadioButton("");
-		rdbtnA_15.setBounds(421, 228, 109, 23);
+		JRadioButton rdbtnA_15 = new JRadioButton("VENUS");
+		rdbtnA_15.setBounds(387, 239, 109, 23);
 		Level3.add(rdbtnA_15);
 		
-		JRadioButton rdbtnA_12 = new JRadioButton("");
-		rdbtnA_12.setBounds(421, 151, 109, 23);
+		JRadioButton rdbtnA_12 = new JRadioButton("SATURN");
+		rdbtnA_12.setBounds(387, 162, 109, 23);
 		Level3.add(rdbtnA_12);
 		
-		JRadioButton rdbtnA_10 = new JRadioButton("");
-		rdbtnA_10.setBounds(421, 100, 109, 23);
+		JRadioButton rdbtnA_10 = new JRadioButton("MARS");
+		rdbtnA_10.setBounds(387, 111, 109, 23);
 		Level3.add(rdbtnA_10);
 		
-		JRadioButton rdbtnA_9 = new JRadioButton("");
-		rdbtnA_9.setBounds(421, 74, 109, 23);
+		JRadioButton rdbtnA_9 = new JRadioButton("JUPITER");
+		rdbtnA_9.setBounds(387, 85, 109, 23);
 		Level3.add(rdbtnA_9);
 		
-		JRadioButton rdbtnA_8 = new JRadioButton("");
-		rdbtnA_8.setBounds(421, 48, 109, 23);
+		JRadioButton rdbtnA_8 = new JRadioButton("EARTH");
+		rdbtnA_8.setBounds(387, 59, 109, 23);
 		Level3.add(rdbtnA_8);
 		
-		JRadioButton rdbtnA_11 = new JRadioButton("");
-		rdbtnA_11.setBounds(421, 126, 109, 23);
+		JRadioButton rdbtnA_11 = new JRadioButton("PLUTO");
+		rdbtnA_11.setBounds(387, 137, 109, 23);
 		Level3.add(rdbtnA_11);
 		
-		JRadioButton rdbtnA_13 = new JRadioButton("");
-		rdbtnA_13.setBounds(421, 176, 109, 23);
+		JRadioButton rdbtnA_13 = new JRadioButton("SUN");
+		rdbtnA_13.setBounds(387, 187, 109, 23);
 		Level3.add(rdbtnA_13);
 		
-		JRadioButton rdbtnA_14 = new JRadioButton("");
-		rdbtnA_14.setBounds(421, 202, 109, 23);
+		JRadioButton rdbtnA_14 = new JRadioButton("URANUS");
+		rdbtnA_14.setBounds(387, 213, 109, 23);
 		Level3.add(rdbtnA_14);
 		
 		JLabel label_3 = new JLabel("Find the following words and tick them");
-		label_3.setBounds(367, 0, 222, 41);
+		label_3.setBounds(333, 11, 222, 41);
 		Level3.add(label_3);
 		
 		JButton button_1 = new JButton("Completed");
-		button_1.setBounds(421, 274, 109, 23);
+		button_1.setBounds(387, 285, 109, 23);
 		Level3.add(button_1);
 		
 		JButton btnNewButton = new JButton("Completed");

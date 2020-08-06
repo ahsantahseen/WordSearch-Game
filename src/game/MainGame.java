@@ -152,48 +152,45 @@ public class MainGame extends JFrame {
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon(MainGame.class.getResource("/puzzles/Puzzle2.JPG")));
 		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setBounds(-35, 11, 395, 308);
+		label.setBounds(-46, 11, 395, 308);
 		Level2.add(label);
 		
 		JRadioButton opt8 = new JRadioButton("SALSA");
-		opt8.setBounds(387, 239, 109, 23);
+		opt8.setBounds(376, 239, 109, 23);
 		Level2.add(opt8);
 		
 		JRadioButton opt5 = new JRadioButton("JUICE");
-		opt5.setBounds(387, 162, 109, 23);
+		opt5.setBounds(376, 162, 109, 23);
 		Level2.add(opt5);
 		
 		JRadioButton opt3 = new JRadioButton("CREAM");
-		opt3.setBounds(387, 111, 109, 23);
+		opt3.setBounds(376, 111, 109, 23);
 		Level2.add(opt3);
 		
 		JRadioButton opt2 = new JRadioButton("COCKTAIL");
-		opt2.setBounds(387, 85, 109, 23);
+		opt2.setBounds(376, 85, 109, 23);
 		Level2.add(opt2);
 		
 		JRadioButton opt1 = new JRadioButton("BURGER");
-		opt1.setBounds(387, 59, 109, 23);
+		opt1.setBounds(376, 59, 109, 23);
 		Level2.add(opt1);
 		
 		JRadioButton opt4 = new JRadioButton("CRISPS");
-		opt4.setBounds(387, 137, 109, 23);
+		opt4.setBounds(376, 137, 109, 23);
 		Level2.add(opt4);
 		
 		JRadioButton opt6 = new JRadioButton("NACHOS");
-		opt6.setBounds(387, 187, 109, 23);
+		opt6.setBounds(376, 187, 109, 23);
 		Level2.add(opt6);
 		
 		JRadioButton opt7 = new JRadioButton("PIZZA");
-		opt7.setBounds(387, 213, 109, 23);
+		opt7.setBounds(376, 213, 109, 23);
 		Level2.add(opt7);
 		
 		JLabel label_1 = new JLabel("Find the following words and tick them");
-		label_1.setBounds(333, 11, 222, 41);
+		label_1.setBounds(322, 11, 222, 41);
 		Level2.add(label_1);
 		
-		JButton button = new JButton("Completed");
-		button.setBounds(387, 285, 109, 23);
-		Level2.add(button);
 		
 		JPanel Level3 = new JPanel();
 		Level3.setBackground(Color.WHITE);
@@ -262,6 +259,24 @@ public class MainGame extends JFrame {
 		});
 		btnNewButton.setBounds(377, 285, 109, 23);
 		Level1.add(btnNewButton);
+		
+		JButton button = new JButton("Completed");
+		button.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(opt1.isSelected()==true&&opt2.isSelected()==true&&opt3.isSelected()==true&&opt4.isSelected()==true&&opt5.isSelected()==true&&opt6.isSelected()==true&&opt7.isSelected()==true&&opt8.isSelected()==true) {
+					Level1.setVisible(false);
+					Level2.setVisible(false);
+					Level3.setVisible(true);
+					}
+					else {
+						JOptionPane.showMessageDialog(contentPane, "Please Find all the words in order to proceed");
+					}	
+			}
+		});
+		button.setBounds(376, 285, 109, 23);
+		Level2.add(button);
+		
 		
 		JButton btnNewButton_1 = new JButton("Start Game!");
 		btnNewButton_1.addMouseListener(new MouseAdapter() {

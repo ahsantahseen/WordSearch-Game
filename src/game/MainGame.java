@@ -78,13 +78,13 @@ public class MainGame extends JFrame {
 		StartMenu.add(lblNewLabel_4);
 		
 		txtEnterName = new JTextField();
-		txtEnterName.setBounds(186, 223, 204, 20);
+		txtEnterName.setBounds(174, 223, 204, 20);
 		StartMenu.add(txtEnterName);
 		txtEnterName.setColumns(10);
 		
 		JLabel lblNewLabel_5 = new JLabel("Enter your name");
 		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_5.setBounds(214, 198, 144, 14);
+		lblNewLabel_5.setBounds(202, 198, 144, 14);
 		StartMenu.add(lblNewLabel_5);
 		
 		
@@ -262,36 +262,39 @@ public class MainGame extends JFrame {
 		btnNewButton_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				//Need to add name verification here
+				if(txtEnterName.getText().isEmpty()==true) {
+					JOptionPane.showMessageDialog(contentPane, "Please enter your name in order to play");
+				}
+				else {
 				StartMenu.setVisible(false);
 				Level1.setVisible(true);
 				Level2.setVisible(false);
 				Level3.setVisible(false);
-			
+				}
 			}
 		});
-		btnNewButton_1.setBounds(237, 254, 100, 23);
+		btnNewButton_1.setBounds(220, 254, 121, 23);
 		StartMenu.add(btnNewButton_1);
 		
 		
 		JLabel lblNewLabel_3 = new JLabel("Player Score:");
 		lblNewLabel_3.setForeground(Color.WHITE);
-		lblNewLabel_3.setBounds(22, 32, 66, 14);
+		lblNewLabel_3.setBounds(22, 32, 89, 14);
 		contentPane.add(lblNewLabel_3);
 		
 		JLabel lblname = new JLabel("$score");
 		lblname.setForeground(Color.WHITE);
-		lblname.setBounds(93, 32, 129, 14);
+		lblname.setBounds(112, 32, 129, 14);
 		contentPane.add(lblname);
 		
 		JLabel label_4 = new JLabel("Player Name:");
 		label_4.setForeground(Color.WHITE);
-		label_4.setBounds(22, 11, 66, 14);
+		label_4.setBounds(22, 11, 89, 14);
 		contentPane.add(label_4);
 		
 		JLabel label_5 = new JLabel("$name");
 		label_5.setForeground(Color.WHITE);
-		label_5.setBounds(93, 11, 129, 14);
+		label_5.setBounds(112, 11, 129, 14);
 		contentPane.add(label_5);
 	}
 }

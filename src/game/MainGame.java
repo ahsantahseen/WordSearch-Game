@@ -67,25 +67,25 @@ public class MainGame extends JFrame {
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setBounds(243, 11, 215, 50);
 		contentPane.add(lblNewLabel);
-		JLabel lblNewLabel_3 = new JLabel("Player Score:");
-		lblNewLabel_3.setForeground(Color.WHITE);
-		lblNewLabel_3.setBounds(22, 32, 89, 14);
-		contentPane.add(lblNewLabel_3);
+		JLabel pscore = new JLabel();
+		pscore.setForeground(Color.WHITE);
+		pscore.setBounds(22, 32, 104, 14);
+		contentPane.add(pscore);
 		
 		JLabel lblplayerscore = new JLabel();
 		lblplayerscore.setForeground(Color.WHITE);
-		lblplayerscore.setBounds(112, 32, 129, 14);
+		lblplayerscore.setBounds(122, 32, 129, 14);
 		contentPane.add(lblplayerscore);
 		
-		JLabel label_4 = new JLabel("Player Name:");
-		label_4.setForeground(Color.WHITE);
-		label_4.setBounds(22, 11, 89, 14);
-		contentPane.add(label_4);
+		JLabel pname = new JLabel();
+		pname.setForeground(Color.WHITE);
+		pname.setBounds(22, 11, 89, 14);
+		contentPane.add(pname);
 		
 		
 		JLabel lblplayername = new JLabel();
 		lblplayername.setForeground(Color.WHITE);
-		lblplayername.setBounds(112, 11, 129, 14);
+		lblplayername.setBounds(112, 11, 252, 14);
 		contentPane.add(lblplayername);
 		
 		JLayeredPane layeredPane = new JLayeredPane();
@@ -226,37 +226,37 @@ public class MainGame extends JFrame {
 		label_2.setBounds(-38, 11, 395, 308);
 		Level3.add(label_2);
 		
-		JRadioButton rdbtnA_15 = new JRadioButton("VENUS");
-		rdbtnA_15.setBounds(387, 239, 109, 23);
-		Level3.add(rdbtnA_15);
+		JRadioButton optn8 = new JRadioButton("VENUS");
+		optn8.setBounds(387, 239, 109, 23);
+		Level3.add(optn8);
 		
-		JRadioButton rdbtnA_12 = new JRadioButton("SATURN");
-		rdbtnA_12.setBounds(387, 162, 109, 23);
-		Level3.add(rdbtnA_12);
+		JRadioButton optn5 = new JRadioButton("SATURN");
+		optn5.setBounds(387, 162, 109, 23);
+		Level3.add(optn5);
 		
-		JRadioButton rdbtnA_10 = new JRadioButton("MARS");
-		rdbtnA_10.setBounds(387, 111, 109, 23);
-		Level3.add(rdbtnA_10);
+		JRadioButton optn3 = new JRadioButton("MARS");
+		optn3.setBounds(387, 111, 109, 23);
+		Level3.add(optn3);
 		
-		JRadioButton rdbtnA_9 = new JRadioButton("JUPITER");
-		rdbtnA_9.setBounds(387, 85, 109, 23);
-		Level3.add(rdbtnA_9);
+		JRadioButton optn2 = new JRadioButton("JUPITER");
+		optn2.setBounds(387, 85, 109, 23);
+		Level3.add(optn2);
 		
-		JRadioButton rdbtnA_8 = new JRadioButton("EARTH");
-		rdbtnA_8.setBounds(387, 59, 109, 23);
-		Level3.add(rdbtnA_8);
+		JRadioButton optn1 = new JRadioButton("EARTH");
+		optn1.setBounds(387, 59, 109, 23);
+		Level3.add(optn1);
 		
-		JRadioButton rdbtnA_11 = new JRadioButton("PLUTO");
-		rdbtnA_11.setBounds(387, 137, 109, 23);
-		Level3.add(rdbtnA_11);
+		JRadioButton optn4 = new JRadioButton("PLUTO");
+		optn4.setBounds(387, 137, 109, 23);
+		Level3.add(optn4);
 		
-		JRadioButton rdbtnA_13 = new JRadioButton("SUN");
-		rdbtnA_13.setBounds(387, 187, 109, 23);
-		Level3.add(rdbtnA_13);
+		JRadioButton optn6 = new JRadioButton("SUN");
+		optn6.setBounds(387, 187, 109, 23);
+		Level3.add(optn6);
 		
-		JRadioButton rdbtnA_14 = new JRadioButton("URANUS");
-		rdbtnA_14.setBounds(387, 213, 109, 23);
-		Level3.add(rdbtnA_14);
+		JRadioButton optn7 = new JRadioButton("URANUS");
+		optn7.setBounds(387, 213, 109, 23);
+		Level3.add(optn7);
 		
 		JLabel label_3 = new JLabel("Find the following words and tick them");
 		label_3.setBounds(333, 11, 222, 41);
@@ -335,6 +335,8 @@ public class MainGame extends JFrame {
 					JOptionPane.showMessageDialog(contentPane, "Please enter your name in order to play");
 				}
 				else {
+					pname.setText("PLAYER NAME:");
+					pscore.setText("PLAYER SCORE:");
 					player_name=txtEnterName.getText().toString();
 					lblplayername.setText(player_name);
 					
@@ -360,27 +362,6 @@ public class MainGame extends JFrame {
 		lblWelcomeGamer.setBounds(129, 0, 292, 93);
 		StartMenu.add(lblWelcomeGamer);
 		
-		JButton button_1 = new JButton("Completed");
-		button_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		button_1.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				StartMenu.setVisible(false);
-				credits.setVisible(true);
-				Level1.setVisible(false);
-				Level2.setVisible(false);
-				Level3.setVisible(false);
-				player_score=player_score+20.0f;
-				lblplayerscore.setText(Float.toString(player_score)+"pts");
-				
-			
-			}
-		});
-		button_1.setBounds(387, 285, 109, 23);
-		Level3.add(button_1);
 		
 		
 		
@@ -389,8 +370,46 @@ public class MainGame extends JFrame {
 		JLabel lblNewLabel_6 = new JLabel("THANK YOU FOR PLAYING");
 		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 22));
 		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_6.setBounds(137, 111, 292, 93);
+		lblNewLabel_6.setBounds(134, 90, 292, 93);
 		credits.add(lblNewLabel_6);
+		
+		JLabel lblplayerHasEarned = new JLabel();
+		lblplayerHasEarned.setHorizontalAlignment(SwingConstants.CENTER);
+		lblplayerHasEarned.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblplayerHasEarned.setBounds(10, 149, 545, 127);
+		credits.add(lblplayerHasEarned);
+		
+		JButton button_1 = new JButton("Completed");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		button_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(optn1.isSelected()==true&&optn2.isSelected()==true&&optn3.isSelected()==true&&optn4.isSelected()==true&&optn5.isSelected()==true&&optn6.isSelected()==true&&optn7.isSelected()==true&&optn8.isSelected()==true)
+				{
+				StartMenu.setVisible(false);
+				credits.setVisible(true);
+				Level1.setVisible(false);
+				Level2.setVisible(false);
+				Level3.setVisible(false);
+				player_score=player_score+20.0f;
+				lblplayerscore.setText(Float.toString(player_score)+"pts");
+				lblplayerHasEarned.setText(player_name+" has completed the puzzle and earned "+Float.toString(player_score)+" points");
+				pname.setVisible(false);
+				pscore.setVisible(false);
+				lblplayername.setVisible(false);
+				lblplayerscore.setVisible(false);
+			
+			}
+				else {
+			     JOptionPane.showMessageDialog(contentPane, "please find all the words in order to proceed");		
+				}
+			}
+		});
+		button_1.setBounds(387, 285, 109, 23);
+		Level3.add(button_1);
 		
 		
 	}

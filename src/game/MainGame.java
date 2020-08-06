@@ -22,6 +22,8 @@ import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MainGame extends JFrame {
 
@@ -239,19 +241,24 @@ public class MainGame extends JFrame {
 		JLabel label_3 = new JLabel("Find the following words and tick them");
 		label_3.setBounds(333, 11, 222, 41);
 		Level3.add(label_3);
+
+		JPanel credits = new JPanel();
+		credits.setLayout(null);
+		layeredPane.add(credits, "name_11963072974199");
 		
-		JButton button_1 = new JButton("Completed");
-		button_1.setBounds(387, 285, 109, 23);
-		Level3.add(button_1);
 		
 		JButton btnNewButton = new JButton("Completed");
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if(op1.isSelected()==true&&op2.isSelected()==true&&op3.isSelected()==true&&op4.isSelected()==true&&op5.isSelected()==true&&op6.isSelected()==true&&op7.isSelected()==true&&op8.isSelected()==true) {
+			StartMenu.setVisible(false);
+			credits.setVisible(false);
 			Level1.setVisible(false);
 			Level2.setVisible(true);
 			Level3.setVisible(false);
+			
+			
 			}
 			else {
 				JOptionPane.showMessageDialog(contentPane, "Please Find all the words in order to proceed");
@@ -266,6 +273,8 @@ public class MainGame extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if(opt1.isSelected()==true&&opt2.isSelected()==true&&opt3.isSelected()==true&&opt4.isSelected()==true&&opt5.isSelected()==true&&opt6.isSelected()==true&&opt7.isSelected()==true&&opt8.isSelected()==true) {
+					StartMenu.setVisible(false);
+					credits.setVisible(false);
 					Level1.setVisible(false);
 					Level2.setVisible(false);
 					Level3.setVisible(true);
@@ -288,6 +297,7 @@ public class MainGame extends JFrame {
 				}
 				else {
 				StartMenu.setVisible(false);
+				credits.setVisible(false);
 				Level1.setVisible(true);
 				Level2.setVisible(false);
 				Level3.setVisible(false);
@@ -296,6 +306,21 @@ public class MainGame extends JFrame {
 		});
 		btnNewButton_1.setBounds(220, 254, 121, 23);
 		StartMenu.add(btnNewButton_1);
+		
+		JButton button_1 = new JButton("Completed");
+		button_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				StartMenu.setVisible(false);
+				credits.setVisible(true);
+				Level1.setVisible(false);
+				Level2.setVisible(false);
+				Level3.setVisible(false);
+			
+			}
+		});
+		button_1.setBounds(387, 285, 109, 23);
+		Level3.add(button_1);
 		
 		
 		JLabel lblNewLabel_3 = new JLabel("Player Score:");
@@ -318,14 +343,11 @@ public class MainGame extends JFrame {
 		label_5.setBounds(112, 11, 129, 14);
 		contentPane.add(label_5);
 		
-		JPanel credits = new JPanel();
-		credits.setLayout(null);
-		layeredPane.add(credits, "name_11963072974199");
 		
 		JLabel lblNewLabel_6 = new JLabel("THANK YOU FOR PLAYING");
 		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 22));
 		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_6.setBounds(137, 103, 292, 93);
+		lblNewLabel_6.setBounds(137, 111, 292, 93);
 		credits.add(lblNewLabel_6);
 		
 	}

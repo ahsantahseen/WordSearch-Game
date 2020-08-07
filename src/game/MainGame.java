@@ -65,7 +65,7 @@ public class MainGame extends JFrame {
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tw Cen MT Condensed", Font.PLAIN, 24));
 		lblNewLabel.setForeground(Color.WHITE);
-		lblNewLabel.setBounds(243, 11, 215, 50);
+		lblNewLabel.setBounds(251, 11, 215, 50);
 		contentPane.add(lblNewLabel);
 		JLabel pscore = new JLabel();
 		pscore.setForeground(Color.WHITE);
@@ -263,6 +263,7 @@ public class MainGame extends JFrame {
 		Level3.add(label_3);
 
 		JPanel credits = new JPanel();
+		credits.setBackground(Color.WHITE);
 		credits.setLayout(null);
 		layeredPane.add(credits, "name_11963072974199");
 		
@@ -368,7 +369,8 @@ public class MainGame extends JFrame {
 		
 		
 		JLabel lblNewLabel_6 = new JLabel("THANK YOU FOR PLAYING");
-		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblNewLabel_6.setBackground(Color.WHITE);
+		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 23));
 		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_6.setBounds(134, 90, 292, 93);
 		credits.add(lblNewLabel_6);

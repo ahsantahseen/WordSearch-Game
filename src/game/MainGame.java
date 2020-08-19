@@ -406,7 +406,7 @@ public class MainGame extends JFrame {
 			
 			}
 				else {
-			     JOptionPane.showMessageDialog(contentPane, "please find all the words in order to proceed");		
+			     JOptionPane.showMessageDialog(contentPane, "Please find all the words in order to proceed");		
 				}
 			}
 		});
